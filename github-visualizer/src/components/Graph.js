@@ -1,3 +1,4 @@
+// === src/components/Graph.js ===
 import React, { useEffect, useRef } from "react";
 import { Network } from "vis-network";
 
@@ -8,10 +9,15 @@ function Graph({ nodes, edges }) {
     if (!nodes.length) return;
 
     const data = {
-      nodes: nodes.map((n) => ({
+      nodes: [...nodes].reverse().map((n) => ({
         ...n,
         shape: "box",
-        font: { size: 14 },
+        font: {
+          size: 14,
+          multi: "md",
+          vadjust: 2,
+        },
+        label: n.label.replace(/(.{30})/g, "$1\n"),
         color: {
           background: "#e0f7fa",
           border: "#0077b6",
@@ -21,21 +27,49 @@ function Graph({ nodes, edges }) {
           },
         },
       })),
-      edges: edges.map((e) => ({ ...e, arrows: "to" })),
+      edges: [...edges].reverse().map((e) => ({
+        from: e.to,
+        to: e.from,
+        arrows: "to",
+      })),
     };
 
     const options = {
-      layout: { improvedLayout: true },
-      physics: { enabled: true },
+      layout: {
+        hierarchical: {
+          enabled: true,
+          direction: "LR",
+          sortMethod: "directed",
+          nodeSpacing: 200,
+          levelSeparation: 300,
+          treeSpacing: 250,
+          blockShifting: false,
+          edgeMinimization: false,
+          parentCentralization: true,
+        },
+      },
+      physics: false,
       interaction: {
         zoomView: true,
         dragView: true,
+        dragNodes: true,
         navigationButtons: true,
         tooltipDelay: 100,
       },
     };
 
-    new Network(containerRef.current, data, options);
+    const network = new Network(containerRef.current, data, options);
+
+    network.on("click", function (params) {
+      if (params.nodes.length > 0) {
+        const nodeId = params.nodes[0];
+        const node = nodes.find((n) => n.id === nodeId);
+        if (node && node.id && node.repoOwner && node.repoName) {
+          const url = `https://github.com/${node.repoOwner}/${node.repoName}/commit/${node.id}`;
+          window.open(url, "_blank");
+        }
+      }
+    });
   }, [nodes, edges]);
 
   return (

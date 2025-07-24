@@ -28,6 +28,8 @@ export async function fetchCommitGraph(owner, repo, branch = "main") {
           id: sha,
           label: message,
           title: `Author: ${commit.commit.author.name}\n${commit.commit.author.date}`,
+          repoOwner: owner,
+          repoName: repo,
         });
       }
 

@@ -24,6 +24,8 @@ function App() {
         margin: "0 auto",
         padding: "2rem",
         textAlign: "center",
+        fontFamily:
+          "'Bitcount Grid Single', 'Bitcount Prop Single', monospace1",
       }}
     >
       <h1>GitHub Commit Graph</h1>

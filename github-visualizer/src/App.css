@@ -3,8 +3,9 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Bitcount Grid Single', 'Bitcount Prop Single', monospace;
 }
+
 
 input[type="text"] {
   width: 70%;

@@ -25,7 +25,12 @@ function RepoInput({ onSubmit }) {
       />
       <button
         type="submit"
-        style={{ padding: "0.5rem 1rem", marginLeft: "1rem" }}
+        style={{
+          padding: "0.5rem 1rem",
+          marginLeft: "1rem",
+          fontFamily:
+            "'Bitcount Grid Single', 'Bitcount Prop Single', monospace1",
+        }}
       >
         Load Graph
       </button>

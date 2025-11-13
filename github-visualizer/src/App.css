@@ -6,8 +6,7 @@
   font-family: 'Bitcount Grid Single', 'Bitcount Prop Single', monospace;
 }
 
-
-input[type="text"] {
+input[type='text'] {
   width: 70%;
   padding: 0.5rem;
   margin-right: 1rem;

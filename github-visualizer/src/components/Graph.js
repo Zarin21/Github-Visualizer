@@ -1,45 +1,45 @@
 // === src/components/Graph.js ===
-import React, { useEffect, useRef } from "react";
-import { Network } from "vis-network";
+import React, { useEffect, useRef } from 'react'
+import { Network } from 'vis-network'
 
 function Graph({ nodes, edges }) {
-  const containerRef = useRef(null);
+  const containerRef = useRef(null)
 
   useEffect(() => {
-    if (!nodes.length) return;
+    if (!nodes.length) return
 
     const data = {
       nodes: [...nodes].reverse().map((n) => ({
         ...n,
-        shape: "box",
+        shape: 'box',
         font: {
           size: 14,
-          multi: "md",
+          multi: 'md',
           vadjust: 2,
         },
-        label: n.label.replace(/(.{30})/g, "$1\n"),
+        label: n.label.replace(/(.{30})/g, '$1\n'),
         color: {
-          background: "#e0f7fa",
-          border: "#0077b6",
+          background: '#e0f7fa',
+          border: '#350c8cff',
           highlight: {
-            background: "#a5d6a7",
-            border: "#004d40",
+            background: '#a5d6a7',
+            border: '#004d40',
           },
         },
       })),
       edges: [...edges].reverse().map((e) => ({
         from: e.to,
         to: e.from,
-        arrows: "to",
+        arrows: 'to',
       })),
-    };
+    }
 
     const options = {
       layout: {
         hierarchical: {
           enabled: true,
-          direction: "LR",
-          sortMethod: "directed",
+          direction: 'LR',
+          sortMethod: 'directed',
           nodeSpacing: 200,
           levelSeparation: 300,
           treeSpacing: 250,
@@ -48,7 +48,7 @@ function Graph({ nodes, edges }) {
           parentCentralization: true,
         },
       },
-      physics: false,
+      physics: true,
       interaction: {
         zoomView: true,
         dragView: true,
@@ -56,28 +56,28 @@ function Graph({ nodes, edges }) {
         navigationButtons: true,
         tooltipDelay: 100,
       },
-    };
+    }
 
-    const network = new Network(containerRef.current, data, options);
+    const network = new Network(containerRef.current, data, options)
 
-    network.on("click", function (params) {
+    network.on('click', function (params) {
       if (params.nodes.length > 0) {
-        const nodeId = params.nodes[0];
-        const node = nodes.find((n) => n.id === nodeId);
+        const nodeId = params.nodes[0]
+        const node = nodes.find((n) => n.id === nodeId)
         if (node && node.id && node.repoOwner && node.repoName) {
-          const url = `https://github.com/${node.repoOwner}/${node.repoName}/commit/${node.id}`;
-          window.open(url, "_blank");
+          const url = `https://github.com/${node.repoOwner}/${node.repoName}/commit/${node.id}`
+          window.open(url, '_blank')
         }
       }
-    });
-  }, [nodes, edges]);
+    })
+  }, [nodes, edges])
 
   return (
     <div
       ref={containerRef}
-      style={{ height: "70vh", border: "1px solid #ccc", borderRadius: "8px" }}
+      style={{ height: '70vh', border: '1px solid #ccc', borderRadius: '8px' }}
     />
-  );
+  )
 }
 
-export default Graph;
+export default Graph

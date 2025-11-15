@@ -4,7 +4,7 @@ A beautiful, interactive web application that visualizes Git commit history as a
 
 🌐 **Live Demo:** [github-visualizer-pi.vercel.app](https://github-visualizer-pi.vercel.app/)
 
-## ✨ Features
+## Features
 
 - **Interactive Graph Visualization**: View commit history as an interactive, hierarchical graph using vis-network
 - **Direct GitHub Integration**: Fetches commit data directly from GitHub's API
@@ -12,7 +12,7 @@ A beautiful, interactive web application that visualizes Git commit history as a
 - **Responsive Design**: Beautiful gradient background with floating blob animations
 - **Easy to Use**: Simply paste any GitHub repository URL to visualize its commits
 
-## 🎨 Design
+## Design
 
 The application features a modern, eye-catching design with:
 - Animated gradient background (purple to blue tones)
@@ -21,7 +21,7 @@ The application features a modern, eye-catching design with:
 - Smooth animations and hover effects
 - Hierarchical left-to-right commit graph layout
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -48,7 +48,7 @@ npm start
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## 📖 Usage
+## Usage
 
 1. Enter a GitHub repository URL (e.g., `https://github.com/facebook/react`)
 2. Click "Load Graph"
@@ -59,7 +59,7 @@ npm start
    - **Pan**: Click and drag
    - **Select**: Click on nodes
 
-## 🛠️ Built With
+## Built With
 
 - **React** - Frontend framework
 - **vis-network** - Graph visualization library
@@ -67,7 +67,7 @@ npm start
 - **GitHub API** - Commit data source
 - **Bitcount Fonts** - Custom typography
 
-## 📁 Project Structure
+## Project Structure
 ```
 github-visualizer/
 ├── public/
@@ -85,7 +85,7 @@ github-visualizer/
 └── package.json
 ```
 
-## 🎯 Key Features Explained
+## Key Features Explained
 
 ### Graph Visualization
 - Hierarchical layout with commits flowing left to right
@@ -100,7 +100,7 @@ github-visualizer/
 - Direct links to GitHub commit pages
 - Works with any public GitHub repository
 
-## 🎮 Controls
+## Controls
 
 - **Zoom In/Out**: Mouse wheel or navigation buttons
 - **Pan**: Click and drag on empty space
@@ -119,13 +119,13 @@ github-visualizer/
 ### Interactive Features
 ![Interactive Features](path/to/screenshot3.png)
 
-## ⚠️ Limitations
+## Limitations
 
 - GitHub API has rate limits (60 requests/hour for unauthenticated users)
 - Currently fetches the last 100 commits from the main branch
 - Requires public repositories (no authentication implemented)
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - [ ] GitHub OAuth integration for private repos
 - [ ] Branch selection dropdown
@@ -135,7 +135,7 @@ github-visualizer/
 - [ ] Search functionality within commits
 - [ ] Multiple branch visualization
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Feel free to:
 1. Fork the repository
@@ -144,14 +144,15 @@ Contributions are welcome! Feel free to:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [vis-network](https://visjs.github.io/vis-network/docs/network/) for the graph visualization library
 - [GitHub API](https://docs.github.com/en/rest) for commit data
 - [Bitcount Fonts](https://fonts.google.com/) for typography
 - Deployed on [Vercel](https://vercel.com)
+
 

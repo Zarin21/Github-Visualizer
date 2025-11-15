@@ -115,7 +115,10 @@ github-visualizer/
 ![Commit Graph](path/to/screenshot2.png)
 
 ### Interactive Features
-![Interactive Features](path/to/screenshot3.png)
+<img width="1914" height="897" alt="image" src="https://github.com/user-attachments/assets/06a2e0c0-fbef-4626-a87e-822220a08e26" />
+<img width="1905" height="729" alt="image" src="https://github.com/user-attachments/assets/7018eca7-dadf-4235-95b7-80b34d6212a0" />
+
+
 
 ## Limitations
 
@@ -141,6 +144,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - [GitHub API](https://docs.github.com/en/rest) for commit data
 - [Bitcount Fonts](https://fonts.google.com/) for typography
 - Deployed on [Vercel](https://vercel.com)
+
 
 
 

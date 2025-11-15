@@ -9,7 +9,6 @@ A beautiful, interactive web application that visualizes Git commit history as a
 - **Interactive Graph Visualization**: View commit history as an interactive, hierarchical graph using vis-network
 - **Direct GitHub Integration**: Fetches commit data directly from GitHub's API
 - **Click to Explore**: Click any commit node to open it directly on GitHub
-- **Responsive Design**: Beautiful gradient background with floating blob animations
 - **Easy to Use**: Simply paste any GitHub repository URL to visualize its commits
 
 ## Design
@@ -32,7 +31,7 @@ The application features a modern, eye-catching design with:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/github-visualizer.git
+git clone https://github.com/Zarin21/github-visualizer.git
 cd github-visualizer
 ```
 
@@ -108,8 +107,6 @@ github-visualizer/
 - **View Commit**: Click any node to open on GitHub
 - **Tooltip**: Hover over nodes to see author and date
 
-## 📸 Screenshots
-
 ### Main Interface
 ![Main Interface](path/to/screenshot1.png)
 
@@ -154,5 +151,6 @@ This project is open source and available under the [MIT License](LICENSE).
 - [GitHub API](https://docs.github.com/en/rest) for commit data
 - [Bitcount Fonts](https://fonts.google.com/) for typography
 - Deployed on [Vercel](https://vercel.com)
+
 
 

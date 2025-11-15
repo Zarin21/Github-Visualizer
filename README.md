@@ -127,19 +127,8 @@ github-visualizer/
 - [ ] GitHub OAuth integration for private repos
 - [ ] Branch selection dropdown
 - [ ] Commit filtering by author/date
-- [ ] Export graph as image
-- [ ] Dark/light theme toggle
 - [ ] Search functionality within commits
 - [ ] Multiple branch visualization
-
-## Contributing
-
-Contributions are welcome! Feel free to:
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## License
 
@@ -151,6 +140,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - [GitHub API](https://docs.github.com/en/rest) for commit data
 - [Bitcount Fonts](https://fonts.google.com/) for typography
 - Deployed on [Vercel](https://vercel.com)
+
 
 
 

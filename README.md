@@ -108,7 +108,8 @@ github-visualizer/
 - **Tooltip**: Hover over nodes to see author and date
 
 ### Main Interface
-![Main Interface](path/to/screenshot1.png)
+<img width="1910" height="905" alt="image" src="https://github.com/user-attachments/assets/5c5fa9ee-ed65-4211-a6a6-998b80a19fb6" />
+
 
 ### Commit Graph Visualization
 ![Commit Graph](path/to/screenshot2.png)
@@ -140,6 +141,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - [GitHub API](https://docs.github.com/en/rest) for commit data
 - [Bitcount Fonts](https://fonts.google.com/) for typography
 - Deployed on [Vercel](https://vercel.com)
+
 
 
 

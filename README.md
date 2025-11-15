@@ -110,8 +110,6 @@ github-visualizer/
 
 ## 📸 Screenshots
 
-[Add your screenshots here]
-
 ### Main Interface
 ![Main Interface](path/to/screenshot1.png)
 
@@ -156,3 +154,4 @@ This project is open source and available under the [MIT License](LICENSE).
 - [GitHub API](https://docs.github.com/en/rest) for commit data
 - [Bitcount Fonts](https://fonts.google.com/) for typography
 - Deployed on [Vercel](https://vercel.com)
+
